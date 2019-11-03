@@ -14,7 +14,8 @@ Backend and REST API for a simple Fly Entertainment Platform
 <br/><br/>
 - Return all contents [GET] »» /api/content/all
 <br/><br/>
-
+- Generate Rating Report File (RatingReport.csv) [GET] »» /api/channel/ratingreport/all
+<br/><br/>
 
 
 
