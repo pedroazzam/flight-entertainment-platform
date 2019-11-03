@@ -1,13 +1,14 @@
-package com.immfly.jrbptest;
+package com.immfly.jrbptask;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 @SpringBootApplication
-public class JrbptestApplication {
+public class JrbptaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JrbptestApplication.class, args);
+		SpringApplication.run(JrbptaskApplication.class, args);
 	}
 
 }

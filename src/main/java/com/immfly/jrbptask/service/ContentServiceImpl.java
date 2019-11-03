@@ -1,12 +1,12 @@
-package com.immfly.jrbptest.service;
+package com.immfly.jrbptask.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.immfly.jrbptest.models.Content;
-import com.immfly.jrbptest.repository.ContentRepository;
+import com.immfly.jrbptask.models.Content;
+import com.immfly.jrbptask.repository.ContentRepository;
 
 @Service
 public class ContentServiceImpl implements ContentService{

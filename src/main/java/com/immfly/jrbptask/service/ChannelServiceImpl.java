@@ -1,12 +1,12 @@
-package com.immfly.jrbptest.service;
+package com.immfly.jrbptask.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.immfly.jrbptest.models.Channel;
-import com.immfly.jrbptest.repository.ChannelRepository;
+import com.immfly.jrbptask.models.Channel;
+import com.immfly.jrbptask.repository.ChannelRepository;
 
 @Service
 public class ChannelServiceImpl implements ChannelService{
@@ -22,5 +22,6 @@ public class ChannelServiceImpl implements ChannelService{
 	public List<Channel> findall(){
 		return channelRepository.findAll();
 	}
+	
 
 }

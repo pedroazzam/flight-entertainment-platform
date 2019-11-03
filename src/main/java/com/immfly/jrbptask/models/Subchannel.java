@@ -1,20 +1,19 @@
-package com.immfly.jrbptest.models;
+package com.immfly.jrbptask.models;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TB_CHANNEL")
-public class Channel implements Serializable{
+@Table(name="TB_SUBCHANNEL")
+public class Subchannel implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -33,20 +32,7 @@ public class Channel implements Serializable{
 	private Byte picture;
 	
 	@OneToMany
-	//@JoinColumn(name="subchannel_id")//IF DELETE THIS, HIBERNATE WILL CREATE OTHER TABLE WITH BOTH IDS
-	private Set<Subchannel> subchannel;
-	
-	@OneToMany
-	//@JoinColumn(name="content_id")//IF DELETE THIS, HIBERNATE WILL CREATE OTHER TABLE WITH BOTH IDS
-	private Set<Content> content;
-
-	public Set<Subchannel> getSubchannel() {
-		return subchannel;
-	}
-
-	public void setSubchannel(Set<Subchannel> subchannel) {
-		this.subchannel = subchannel;
-	}
+	private List<Content> content;
 
 	public long getId() {
 		return id;
@@ -80,7 +66,14 @@ public class Channel implements Serializable{
 		this.picture = picture;
 	}
 
-	
+	public List<Content> getContent() {
+		return content;
+	}
+
+	public void setContent(List<Content> content) {
+		this.content = content;
+	}
+
 	
 	
 }

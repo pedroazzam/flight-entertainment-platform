@@ -1,8 +1,8 @@
-package com.immfly.jrbptest.models;
+package com.immfly.jrbptask.models;
 
 import java.io.File;
 import java.io.Serializable;
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,8 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.mapping.MetaAttribute;
+
 @Entity
-@Table(name="TB_SUBCHANNEL")
+@Table(name="TB_CONTENT")
 public class Content implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -24,16 +26,14 @@ public class Content implements Serializable{
 	
 	@Column(name="file")
 	private File file;
-	
+
 	@Column(name="metadata")
-	private String metadata;
-	//private BasicFileAttributes metadata;
+	private MetaAttribute metadata;
 	
 	@Column(name="rating")
-	private DecimalFormat rating;
+	private BigDecimal rating;
 	
 	
-
 	public long getId() {
 		return id;
 	}
@@ -48,30 +48,22 @@ public class Content implements Serializable{
 
 	public void setFile(File file) {
 		this.file = file;
+		
 	}
 
-	public String getMetadata() {
+	public MetaAttribute getMetadata() {
 		return metadata;
 	}
 
-	public void setMetadata(String metadata) {
+	public void setMetadata(MetaAttribute metadata) {
 		this.metadata = metadata;
 	}
-	/*
-	public BasicFileAttributes getMetadata() {
-		return metadata;
-	}
 
-	public void setMetadata(BasicFileAttributes metadata) {
-		this.metadata = metadata;
-	}
-	*/
-
-	public DecimalFormat getRating() {
+	public BigDecimal getRating() {
 		return rating;
 	}
 
-	public void setRating(DecimalFormat rating) {
+	public void setRating(BigDecimal rating) {
 		this.rating = rating;
 	}
 	

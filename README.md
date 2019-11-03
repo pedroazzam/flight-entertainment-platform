@@ -5,7 +5,7 @@ Backend and REST API for a simple Fly Entertainment Platform
 ## REST API - Access
 
 * Postman or similar
-* Swagger -> It's implanted in this system (http://localhost:8080/swagger-ui.html) --> *implementing*
+* Swagger -> It's implanted in this system (http://localhost:8080/swagger-ui.html)
 
 
 ### REST API - Methods

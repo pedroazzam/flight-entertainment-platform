@@ -1,8 +1,8 @@
-package com.immfly.jrbptest.service;
+package com.immfly.jrbptask.service;
 
 import java.util.List;
 
-import com.immfly.jrbptest.models.Content;
+import com.immfly.jrbptask.models.Content;
 
 public interface ContentService {
 	
