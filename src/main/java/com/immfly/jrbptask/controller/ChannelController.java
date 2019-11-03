@@ -34,7 +34,7 @@ public class ChannelController {
 		return channelService.findall();
 	}
 	
-	@GetMapping("/channel/rating")
+	@GetMapping("/channel/ratingreport")
 	@ApiOperation(value = "Generate RatingReport.csv")
 	public void avgRatingReport() throws IOException {
 		ArrayList<ArrayList<String>> report = new ArrayList<ArrayList<String>>();
